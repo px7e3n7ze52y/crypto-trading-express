@@ -1,0 +1,247 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "",
+    "version": "MVC",
+    "title": "Crypto Trading"
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/depositMoney": {
+      "post": {
+        "tags": [
+          "depositMoney"
+        ],
+        "summary": "",
+        "description": "",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "in": "USD",
+            "name": "moneyDeposit",
+            "description": "",
+            "type": "number"
+          }
+          
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              },
+              "example": {
+                "message": "Deposit successful"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              },
+              "example": {
+                "message": "Deposit unsuccessful"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/withdrawMoney": {
+      "post": {
+        "tags": [
+          "withdrawMoney"
+        ],
+        "summary": "",
+        "description": "",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "moneyWithdrawal",
+            "description": "",
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              },
+              "example": {
+                "message": "Withdrawal successful"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              },
+              "example": {
+                "message": "Withdrawal unsuccessful"
+              }
+            }
+          }
+        }
+      }
+    }
+    ,
+    "/buyBTC": {
+      "post": {
+        "tags": [
+          "buyBTC"
+        ],
+        "summary": "",
+        "description": "",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          
+          {
+            "in": "formData",
+            "name": "numBuyBTC",
+            "description": "",
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              },
+              "example": {
+                "message": "buying BTC successful"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              },
+              "example": {
+                "message": "buying BTC unsuccessful"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sellBTC": {
+      "post": {
+        "tags": [
+          "sellBTC"
+        ],
+        "summary": "",
+        "description": "",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          
+          {
+            "in": "formData",
+            "name": "numSellBTC",
+            "description": "",
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              },
+              "example": {
+                "message": "selling BTC successful"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              },
+              "example": {
+                "message": "selling BTC unsuccessful"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ShowWallet": {
+      "get": {
+        "tags": [
+          "ShowWallet"
+        ],
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              },
+              "example": {
+                "message": "Success"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              },
+              "example": {
+                "message": "Something Wrong"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
